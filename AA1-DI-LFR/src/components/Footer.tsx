@@ -4,9 +4,14 @@ export default function Footer() {
   return (
     <footer 
       style={{ 
+        backgroundColor: "var(--color-fondo-secundario)",
         padding: "16px", 
-        borderTop: "1px solid #eee", 
-        marginTop: "24px" 
+        borderTop: "1px solid var(--color-borde)", 
+        marginTop: "24px",
+        textAlign: "center",
+        fontSize: "15px",
+        color: "var(--color-texto)",
+        width: "100%",
         }}
       >
         <p style={{ margin: "5px 0" }}>
