@@ -45,7 +45,7 @@ export default function Navigation() {
           fontWeight: "bold",
         })}
       >
-        Buscar cócteles 🔎
+        Todos los cócteles 🍸
       </NavLink>
     </nav>
   );
