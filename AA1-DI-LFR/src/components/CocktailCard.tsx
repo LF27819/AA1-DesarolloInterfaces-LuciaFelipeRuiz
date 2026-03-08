@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Cocktail = {
   idDrink: string
   strDrink: string
@@ -28,11 +30,12 @@ export default function CocktailCard({ cocktail }: Props) {
     >
       <h2
         style={{
-          color: "var(--color-titulo)",
           marginBottom: "20px"
         }}
       >
-        {cocktail.strDrink}
+        <Link to={`/cocktails/${cocktail.idDrink}`} className="cocktail-link">
+          {cocktail.strDrink}
+        </Link>
       </h2>
 
       <img

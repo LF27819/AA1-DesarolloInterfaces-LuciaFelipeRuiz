@@ -20,17 +20,24 @@ body {
   --color-fondo-secundario: #4b172d;
   --color-borde: #f1af6d;
   --color-texto: #f7c691;
+  --color-texto-oscuro: #3d0a28;
   --color-boton-act: #a34700;
   --color-boton-des: #883e09;
-
-
-
-  --color-panel: #cc9966;
-  --color-texto-oscuro: #2b1207;
   --color-titulo: #d35400;
-  
+  --color-titulo-detalle: #e77a31;
+  --color-titulo-act: #b92c67; 
+  --color-panel: #cc9966;
 }
 
 a {
   text-decoration: none;
+}
+
+.cocktail-link {
+  color: var(--color-titulo);
+  transition: color 0.2s ease;
+}
+
+.cocktail-link:hover {
+  color: var(--color-titulo-act);
 }

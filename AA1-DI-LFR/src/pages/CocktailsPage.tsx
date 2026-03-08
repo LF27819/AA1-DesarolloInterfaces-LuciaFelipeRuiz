@@ -11,7 +11,7 @@ export default function CocktailsPage() {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   useEffect(() => {
-    const letras = "abcdefghijklmnopqrstuvwxyz".split("");
+    const letras = "abcdw".split("");
 
     Promise.all(
       letras.map((letra) =>
