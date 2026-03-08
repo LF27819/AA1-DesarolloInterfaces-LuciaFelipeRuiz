@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import CocktailCard from "../components/CocktailCard";
+import SectionTitle from "../components/SectionTitle";
+import CocktailFilters from "../components/CocktailFilters";
 
 export default function CocktailsPage() {
   const [cocktails, setCocktails] = useState<any[]>([]);
@@ -78,69 +80,17 @@ export default function CocktailsPage() {
 
   return (
     <div>
-      <h1 style={{ marginBottom: "20px", textAlign: "center" }}>
-        Todos los cócteles 🍸
-      </h1>
+      <SectionTitle text="Todos los cócteles 🍸" />
 
-      <div
-        style={{
-          display: "flex",
-          gap: "12px",
-          marginBottom: "24px",
-          justifyContent: "center",
-          flexWrap: "wrap",
-
-        }}
-      >
-        <input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Buscar por nombre, categoría, tipo o vaso..."
-          style={{
-            flex: 1,
-            minWidth: "260px",
-            maxWidth: "420px",
-            padding: "12px 14px",
-            borderRadius: "10px",
-            border: "2px solid var(--color-borde)",
-            fontSize: "1rem",
-          }}
-        />
-
-        <select
-          value={alcoholFilter}
-          onChange={(event) => setAlcoholFilter(event.target.value)}
-          style={{
-            padding: "12px 14px",
-            borderRadius: "10px",
-            border: "2px solid var(--color-borde)",
-            fontSize: "1rem",
-            minWidth: "180px",
-          }}
-        >
-          <option value="all">Todos los tipos</option>
-          {alcoholOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-
-        <select
-          value={sortOrder}
-          onChange={(event) => setSortOrder(event.target.value as "asc" | "desc")}
-          style={{
-            padding: "12px 14px",
-            borderRadius: "10px",
-            border: "2px solid var(--color-borde)",
-            fontSize: "1rem",
-            minWidth: "180px",
-          }}
-        >
-          <option value="asc">Ascendente (A-Z)</option>
-          <option value="desc">Descendente (Z-A)</option>
-        </select>
-      </div>
+      <CocktailFilters
+        query={query}
+        onQueryChange={setQuery}
+        alcoholFilter={alcoholFilter}
+        onAlcoholFilterChange={setAlcoholFilter}
+        alcoholOptions={alcoholOptions}
+        sortOrder={sortOrder}
+        onSortOrderChange={setSortOrder}
+      />
 
       <p style={{ marginBottom: "24px", textAlign: "center" }}>
         Resultados: {sortedCocktails.length}
