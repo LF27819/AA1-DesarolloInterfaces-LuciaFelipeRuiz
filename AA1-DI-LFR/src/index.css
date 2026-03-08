@@ -20,11 +20,11 @@ body {
   --color-fondo-secundario: #4b172d;
   --color-borde: #f1af6d;
   --color-texto: #f7c691;
+  --color-titulo: #f7c691;
   --color-texto-oscuro: #3d0a28;
   --color-boton-act: #a34700;
   --color-boton-des: #883e09;
-  --color-titulo: #d35400;
-  --color-titulo-detalle: #e77a31;
+  --color-titulo-tarj: #d35400;
   --color-titulo-act: #b92c67; 
   --color-panel: #cc9966;
 }
@@ -34,7 +34,7 @@ a {
 }
 
 .cocktail-link {
-  color: var(--color-titulo);
+  color: var(--color-titulo-tarj);
   transition: color 0.2s ease;
 }
 

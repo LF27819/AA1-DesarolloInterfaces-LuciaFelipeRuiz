@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import BackButton from "../components/BackButton";
+import SectionTitle from "../components/SectionTitle";
 
 type CocktailDetail = {
   idDrink: string;
@@ -81,16 +83,7 @@ export default function CocktailDetailPage() {
         padding: "30px 20px",
       }}
     >
-      <h1
-        style={{
-          textAlign: "center",
-          color: "var(--color-titulo-detalle)",
-          marginBottom: "30px",
-          fontSize: "2.8rem",
-        }}
-      >
-        Detalle del Cóctel 🍹
-      </h1>
+      <SectionTitle text="Detalle del Cóctel 🍹" />
 
       <div
         style={{
@@ -192,6 +185,8 @@ export default function CocktailDetailPage() {
             </>
           )}
           
+          <BackButton to="/cocktails" text="Volver a cócteles" />
+
         </div>
       </div>
     </div>
