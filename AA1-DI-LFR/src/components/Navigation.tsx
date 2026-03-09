@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
-export default function Navigation() {
+type Props = {
+  theme: "light" | "dark";
+  onToggleTheme: () => void;
+};
+
+export default function Navigation({ theme, onToggleTheme }: Props) {
   return (
     <nav
       style={{
@@ -11,7 +17,8 @@ export default function Navigation() {
         gap: "40px",
         flexWrap: "wrap",
         borderBottom: "1px solid var(--color-borde)",
-        marginBottom:"24px",
+        marginBottom: "24px",
+        backgroundColor: "var(--color-nav)"
       }}
     >
       <NavLink
@@ -47,6 +54,9 @@ export default function Navigation() {
       >
         Todos los cócteles 🍸
       </NavLink>
+
+      <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
+      
     </nav>
   );
 }
