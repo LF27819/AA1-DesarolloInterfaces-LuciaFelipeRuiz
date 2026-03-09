@@ -13,9 +13,11 @@ body {
   margin: 0;
   background-color: var(--color-fondo);
   color: var(--color-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:root {
+/* MODO OSCURO */
+body[data-theme="dark"] {
   --color-fondo: #320015;
   --color-fondo-secundario: #4b172d;
   --color-borde: #f1af6d;
@@ -23,10 +25,27 @@ body {
   --color-titulo: #f7c691;
   --color-texto-oscuro: #3d0a28;
   --color-boton-act: #a34700;
-  --color-boton-des: #883e09;
+  --color-boton-des: #c16421;
   --color-titulo-tarj: #d35400;
-  --color-titulo-act: #b92c67; 
+  --color-titulo-act: #b92c67;
   --color-panel: #cc9966;
+  --color-nav: #4a0a24;
+}
+
+/* MODO CLARO */
+body[data-theme="light"] {
+  --color-fondo: #f0cba2;
+  --color-fondo-secundario: #f6dfc9;
+  --color-borde: #c97b3c;
+  --color-texto: #6b2d12;
+  --color-titulo: #a34700;
+  --color-texto-oscuro: #4a2415;
+  --color-boton-act: #b85c1e;
+  --color-boton-des: #d18a52;
+  --color-titulo-tarj: #c45a00;
+  --color-titulo-act: #b92c67;
+  --color-panel: #e7b98a;
+  --color-nav: #f1cfae;
 }
 
 a {
